@@ -1,3 +1,5 @@
+import json
+from pydantic import BaseModel
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, declared_attr
 
 
@@ -14,4 +16,7 @@ class Base(DeclarativeBase):
     #mapped_column — это функция, которая используется для создания колонок в моделях SQLAlchemy. 
     # Она принимает в качестве аргументов тип данных колонки и дополнительные параметры, 
     # такие как primary_key, nullable, default и так далее
-    id: Mapped[int] = mapped_column(primary_key=True)   
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+class Data(BaseModel):
+    data: dict
