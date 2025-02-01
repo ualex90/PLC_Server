@@ -14,3 +14,4 @@ router = APIRouter(prefix="/criptosem", tags=["criptosem"])
 def list_items(data: Data):
     print(data.data["a"])
     return data
+    
