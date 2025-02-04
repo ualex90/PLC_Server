@@ -10,8 +10,8 @@ router = APIRouter(prefix="/criptosem", tags=["criptosem"])
 # def load_data(data: Data):
 #     return Data.data
 
-@router.post("")
+@router.post("/data")
 def list_items(data: Data):
-    print(data.data["a"])
+    print(data.data)
     return data
     
